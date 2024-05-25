@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+           <a href="/feed" ><img src="/images/Icons/Pinterest Icon.png" alt=""></a>
+            <h5>Home</h5>
+            <h5>Explore</h5>
+            <h5>Create</h5>
+            <div id="search">
+                <i class="ri-search-line"></i>
+                <input type="text">
+                <div class="inputPin">
+                    <h5>Your Pin</h5>
+                    <i class="ri-arrow-drop-down-line"></i>
+                </div>
+            </div>
+            <i class="ri-notification-4-fill"></i>
+            <i class="ri-chat-1-fill"></i>
+            <div id="profileImg">
+                <img src="" alt="">
+            </div>
+            <i id="arrow" class="ri-arrow-drop-down-line dropdown">
+                <ul class="dropdown-content">
+                    <li><a href="#">Add Account</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="/logout">LogOut</a></li>
+                  </ul>
+            </i>
+        </div>
+        <div id="centerProfile">
+            <div id="Profile">
+                <div id="userImage"></div>
+                <h2><%=user.username%></h2>
+                <h4><%=user.fullname%></h4>
+                <h5>following</h5>
+                <div id="profileButton">
+                    <a href="">Share</a>
+                    <a href="">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div id="top-text">
+                <h3>Save</h3>
+            </div>
+            <div id="save-design">
+                <div id="save-designs">
+                    <div id="for-img">
+                        <img src="https://cdn.dribbble.com/users/1323412/screenshots/3157050/media/d8fb7b23a57f814e4b8b1acefb6f79a8.png" alt="">
+                    </div>
+                    <h4>UI/UX Design</h4>
+                </div>
+            </div>
+            <div id="save-design">
+                <div id="save-designs">
+                    <div id="for-img"><img src="https://i.pinimg.com/564x/02/8a/89/028a89281739f7166deca49ae20207ce.jpg" alt=""></div>
+                    <h4>Design</h4>
+                </div>
+            </div>
+            <div id="save-design">
+                <div id="save-designs">
+                    <div id="for-img"><img src="https://i.etsystatic.com/49041096/r/il/5513e3/5615521012/il_1588xN.5615521012_t7ds.jpg" alt=""></div>
+                    <h4>Music</h4>
+                </div>
+            </div>
+            <div id="save-design">
+                <div id="save-designs">
+                    <div id="for-img"><img src="https://i.pinimg.com/736x/e6/4a/9f/e64a9fae020b03933bc74ae4d2a3f207.jpg" alt=""></div>
+                    <h4>Logo</h4>
+                </div>
+            </div>
+            <div id="save-design">
+                <div id="save-designs">
+                    <div id="for-img"><img src="https://img.freepik.com/premium-psd/food-social-media-banner-post-template_757456-120.jpg?w=740" alt=""></div>
+                    <h4>Food</h4>
+                </div>
+            </div>
+            <div id="save-design">
+                <div id="save-designs">
+                    <div id="for-img"><img src="https://i.pinimg.com/564x/ca/a2/7a/caa27afe944ae448c242f92a6da58805.jpg" alt=""></div>
+                    <h4>Sports</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
