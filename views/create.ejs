@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/create.css" />
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <img src="/images/Icons/Pinterest Icon.png" alt="" />
+            <h5>Home</h5>
+            <h5>Explore</h5>
+            <a href="">
+                <h5>Create</h5>
+            </a>
+            <div id="search">
+                <i class="ri-search-line"></i>
+                <input type="text" placeholder="Search" />
+                
+                <div class="inputPin">
+                    <h5>Your Pin</h5>
+                    <i class="ri-arrow-drop-down-line"></i>
+                </div>
+            </div>
+            <i class="ri-notification-4-fill"></i>
+            <i class="ri-chat-1-fill"></i>
+            <div id="profileImg">
+                <img src="" alt="" />
+            </div>
+            <i id="arrow" class="ri-arrow-drop-down-line dropdown">
+                <ul class="dropdown-content">
+                    <li><a href="#">Add Account</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="/logout">LogOut</a></li>
+                </ul>
+            </i>
+        </div>
+        <div id="centerPart">
+            <div id="centerLeft">
+                <div id="leftIcons">
+                    <i class="ri-arrow-right-double-fill"></i>
+                    <i class="ri-add-line"></i>
+                </div>
+            </div>
+            <div id="centerRight">
+                <div id="centerTop">
+                    <h3>Create Pin</h3>
+                </div>
+                <form id="hidden" action="/upload" method="post" enctype="multipart/form-data">
+                    <input id="fileinp" type="file" name="filename" placeholder="Choose Photo">
+                    <input id="submit" type="submit">
+                </form>
+
+                <div id="uploadSection">
+                    
+                    <div id="upload-block">
+                        <i class="ri-arrow-up-circle-fill"></i>
+                        <p>Choose a file on click</p>
+                    </div>
+                    <div id="upload-detail">
+                        <div id="title">
+                            <h5>Title</h5>
+                            <input class="title" name="title" type="text" placeholder="Add a Title" required />
+                        </div>
+
+                        <div id="desc">
+                            <h5>Description</h5>
+                            <input class="Description" name="Description" type="text"
+                                placeholder="Add a Detail Description" />
+                        </div>
+                        <div id="submit">
+                            <input type="submit-btn" class="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#upload-block").addEventListener("click", function () {
+            document.querySelector("#fileinp").click()
+        })
+        document.querySelector("#fileinp").addEventListener("change", function () {
+            document.querySelector("#submit").click()
+        })
+    </script>
+</body>
+
+</html>

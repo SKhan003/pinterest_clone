@@ -69,7 +69,7 @@ body {
     height: 5vh;
     border-right: solid #dadada 2px;
     outline: none;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #search:hover {
@@ -120,7 +120,7 @@ body {
 #contents {
     margin: auto;
     width: 97vw;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 #save-design {
