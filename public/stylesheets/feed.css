@@ -55,3 +55,7 @@ img:hover {
     width: 25%;
   }
 }
+#line{
+  text-decoration-line: none;
+  color: black;
+}

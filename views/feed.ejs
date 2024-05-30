@@ -1,44 +1,5 @@
-<html lang="en">
+<% include ./partial/header.ejs %>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
-  <title>Pinterest</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/stylesheets/feed.css" />
-  <link rel="stylesheet" href="/stylesheets/profile.css" />
-</head>
-
-<body>
-  <div id="nav">
-    <a href="/feed"><img src="/images/Icons/Pinterest Icon.png" alt=""></a>
-    <a href="/feed"><h5>Home</h5></a>
-    <h5>Explore</h5>
-    <a href=""><h5>Create</h5></a>
-    <div id="search">
-      <i class="ri-search-line"></i>
-      <input type="text">
-      <div class="inputPin">
-        <h5>Your Pin</h5>
-        <i class="ri-arrow-drop-down-line"></i>
-      </div>
-    </div>
-    <i class="ri-notification-4-fill"></i>
-    <i class="ri-chat-1-fill"></i>
-    <a href="/profile">
-      <div id="profileImg">
-
-      </div>
-    </a>
-    <i id="arrow" class="ri-arrow-drop-down-line dropdown">
-      <ul class="dropdown-content">
-        <li><a href="#">Add Account</a></li>
-        <li><a href="#">Setting</a></li>
-        <li><a href="/logout">LogOut</a></li>
-      </ul>
-    </i>
-  </div>
   <div class="grid">
     <div class="grid-item">
       <img
@@ -139,18 +100,5 @@
         src="https://images.unsplash.com/photo-1694768302592-7e9e32fcc65a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUzNDI4NTZ8&ixlib=rb-4.0.3&q=85" />
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script>
-    $(".grid").imagesLoaded(function () {
-      $(".grid").masonry({
-        itemSelector: ".grid-item",
-      });
-    });
-  </script>
-</body>
-
-</html>
+<% include ./partial/footer.ejs %>

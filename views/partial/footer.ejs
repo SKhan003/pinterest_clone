@@ -1,0 +1,18 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+  $(".grid").imagesLoaded(function () {
+    $(".grid").masonry({
+      itemSelector: ".grid-item",
+    });
+  });
+  document.querySelector("#upload-block").addEventListener("click", function () {
+            document.querySelector("#fileinp").click()
+        })
+</script>
+</body>
+
+</html>

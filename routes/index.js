@@ -7,6 +7,11 @@ const localStrategy = require('passport-local');
 const upload = require('./multer');
 passport.use(new localStrategy(userModel.authenticate()));
 
+
+
+// 
+
+// 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -24,17 +29,25 @@ router.get('/create', function(req, res, next) {
   res.render('create');
 });
 
-router.post('/upload',upload.single('file'), function(req, res, next) {
+router.post('/upload', isLoggedIn,upload.single('filename'), async function(req, res, next) {
   if(!req.file){
     return res.status(400).send('No File Were Uploaded')
   }
-  res.send('File Uploaded Sucessfully');
+  const user = await userModel.findOne({username:req.session.passport.user})
+  const postData = await postModel.create({
+    image:req.file.filename,
+    imageText:req.body.filecaption,
+    user:user._id
+  });
+  user.posts.push(postData._id)
+  await user.save()
+  res.send('done')
 });
 
 router.get('/profile', isLoggedIn , async function(req, res, next) {
   const user = await userModel.findOne({
     username:req.session.passport.user
-  }) 
+  }) .populate('posts')
   res.render('profile',{user});
 });
 
